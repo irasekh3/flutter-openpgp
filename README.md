@@ -1,6 +1,6 @@
 # OpenPGP
 
-Library for use openPGP
+Library for using openPGP in dart based framework apps auch as Flutter (iOS, android, desktop, web) and Hover
 
 ## Usage
 
