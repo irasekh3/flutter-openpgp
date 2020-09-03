@@ -26,17 +26,22 @@ var keyPair = await OpenPGP.generate(
       ),
 );
 
-
+// encrypt a message
 var encrypted = await OpenPGP.encrypt("text","[publicKey here]");
 
+// decrypt a message (optionally with a passphrase)
 var decrypted = await OpenPGP.decrypt("text encrypted","[privateKey here]","[passphrase here]");
 
+// sign a message (optionally with a passphrase)
 var signed = await OpenPGP.sign("text","[publicKey here]","[privateKey here]","[passphrase here]");
 
+// verify a signed message
 var verified = await OpenPGP.verify("text signed","text","[publicKey here]");
 
+// symmetrically encrypt a message with a passphrase
 var encryptedSymmetric = await OpenPGP.encryptSymmetric("text","[passphrase here]");
 
+// symmetrically dencrypt a message with a passphrase
 var decryptedSymmetric = await OpenPGP.decryptSymmetric("text encrypted","[passphrase here]");
 
 ```
